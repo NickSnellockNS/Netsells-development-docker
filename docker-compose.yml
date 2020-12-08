@@ -1,0 +1,65 @@
+version: '3'
+services:
+  php:
+    build:
+      context: ./docker/conf/php
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ../FaegerMart:/var/www
+      - ~/.composer:/var/www/.composer
+      - ./docker/conf/nginx/faegermart.test.crt:/var/www/certs/faegermart.test.crt
+      - ./docker/conf/nginx/faegermart.test.key:/var/www/certs/faegermart.test.key
+    depends_on:
+      - mysql
+      - redis
+    environment:
+      PHP_IDE_CONFIG: "serverName=faegermart.test"
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+
+  web:
+    build:
+      context: ./
+      dockerfile: ./docker/conf/nginx/Dockerfile
+    volumes:
+      - ../FaegerMart:/var/www
+      - ./docker/conf/nginx/faegermart.test.crt:/etc/nginx/faegermart.test.crt
+      - ./docker/conf/nginx/faegermart.test.key:/etc/nginx/faegermart.test.key
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    depends_on:
+      - php
+      - mysql
+      - redis
+
+  mysql:
+    image: library/mysql:5.7.32
+    restart: always
+    environment:
+      MYSQL_DATABASE: faegermart
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/data/mysql:/var/lib/mysql
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+    restart: always
+    volumes:
+      - ./docker/data/redis:/data
+
+  mailcatcher:
+    image: mailhog/mailhog
+    ports:
+      - 8025:8025
+      - 1025:1025
+    restart: unless-stopped
+    volumes:
+      - ../data/email:/home/mailhog/email
