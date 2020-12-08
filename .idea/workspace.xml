@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57cfc0f7-0a78-4553-9259-f7eefbf5cc8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/FaegerMart-docker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/mariadb/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/default.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/faegermart.test.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/faegermart.test.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/php/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/php/composer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/php/install_composer.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/php/php.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data/mysql/ca.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data/mysql/client-cert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data/mysql/public_key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data/mysql/server-cert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data/redis/dump.rdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/faegermart.sh" afterDir="false" />
+    <list default="true" id="57cfc0f7-0a78-4553-9259-f7eefbf5cc8f" name="Default Changelist" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +32,8 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -66,11 +47,23 @@
       <workItem from="1607359006086" duration="481000" />
       <workItem from="1607421535810" duration="833000" />
       <workItem from="1607424378492" duration="8179000" />
-      <workItem from="1607435697714" duration="5040000" />
+      <workItem from="1607435697714" duration="5767000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1607444130931</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607444130931</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
