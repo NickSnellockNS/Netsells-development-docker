@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57cfc0f7-0a78-4553-9259-f7eefbf5cc8f" name="Default Changelist" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/netsells.test.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/netsells.test.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/netsells.test.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/ssl-default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FaegerMart-docker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Netsells-development-docker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/conf/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/conf/nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/conf/nginx/faegermart.test.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/conf/nginx/faegermart.test.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/conf/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/conf/php/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faegermart.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +29,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$/../unity/public" selected_validation_type="LOCAL" web_path_to_validation_script="http://unity.localhost/index.php" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="netsells-development-docker_php:latest" />
   <component name="ProjectId" id="1lKwHi0JuMPQoYTYUXHBgzvI336" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -25,7 +41,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
+    <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm" value="Docker" />
+    <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm" value="Docker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker/conf/nginx" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -33,8 +52,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker/conf/nginx" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,6 +72,7 @@
       <workItem from="1607421535810" duration="833000" />
       <workItem from="1607424378492" duration="8179000" />
       <workItem from="1607435697714" duration="5767000" />
+      <workItem from="1609767691214" duration="9652000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607444130931</created>
@@ -65,5 +90,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

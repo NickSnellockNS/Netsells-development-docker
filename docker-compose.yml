@@ -6,26 +6,31 @@ services:
       dockerfile: Dockerfile
     restart: always
     volumes:
-      - ../FaegerMart:/var/www
+      - ${PROJECT_ROOT}:/var/www
       - ~/.composer:/var/www/.composer
-      - ./docker/conf/nginx/faegermart.test.crt:/var/www/certs/faegermart.test.crt
-      - ./docker/conf/nginx/faegermart.test.key:/var/www/certs/faegermart.test.key
+      - ./docker/conf/nginx/netsells.test.crt:/var/www/certs/netsells.test.crt
+      - ./docker/conf/nginx/netsells.test.key:/var/www/certs/netsells.test.key
     depends_on:
       - mysql
       - redis
+    network_mode: bridge
+    links:
+      - mysql
+      - redis
+      - mailcatcher
     environment:
-      PHP_IDE_CONFIG: "serverName=faegermart.test"
+      PHP_IDE_CONFIG: "serverName=${APP_URL}"
     extra_hosts:
-      - "host.docker.internal:172.17.0.1"
+      - "host.docker.internal:192.168.32.1"
 
   web:
     build:
       context: ./
       dockerfile: ./docker/conf/nginx/Dockerfile
     volumes:
-      - ../FaegerMart:/var/www
-      - ./docker/conf/nginx/faegermart.test.crt:/etc/nginx/faegermart.test.crt
-      - ./docker/conf/nginx/faegermart.test.key:/etc/nginx/faegermart.test.key
+      - ${PROJECT_ROOT}:/var/www
+      - ./docker/conf/nginx/netsells.test.crt:/etc/nginx/netsells.test.crt
+      - ./docker/conf/nginx/netsells.test.key:/etc/nginx/netsells.test.key
     ports:
       - 80:80
       - 443:443
@@ -34,18 +39,22 @@ services:
       - php
       - mysql
       - redis
+    network_mode: bridge
+    links:
+      - php
 
   mysql:
-    image: library/mysql:5.7.32
+    image: library/mysql
     restart: always
     environment:
-      MYSQL_DATABASE: faegermart
-      MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
     ports:
       - 3306:3306
     volumes:
       - ./docker/data/mysql:/var/lib/mysql
+    network_mode: bridge
 
   redis:
     image: redis
@@ -54,6 +63,7 @@ services:
     restart: always
     volumes:
       - ./docker/data/redis:/data
+    network_mode: bridge
 
   mailcatcher:
     image: mailhog/mailhog
@@ -63,3 +73,4 @@ services:
     restart: unless-stopped
     volumes:
       - ../data/email:/home/mailhog/email
+    network_mode: bridge
