@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57cfc0f7-0a78-4553-9259-f7eefbf5cc8f" name="Default Changelist" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/netsells.test.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/netsells.test.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/netsells.test.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/conf/nginx/ssl-default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FaegerMart-docker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Netsells-development-docker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="57cfc0f7-0a78-4553-9259-f7eefbf5cc8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/conf/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/conf/nginx/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/conf/nginx/faegermart.test.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/conf/nginx/faegermart.test.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/conf/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/conf/php/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faegermart.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/conf/mariadb/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/conf/nginx/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/conf/nginx/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +60,9 @@
       <workItem from="1607421535810" duration="833000" />
       <workItem from="1607424378492" duration="8179000" />
       <workItem from="1607435697714" duration="5767000" />
-      <workItem from="1609767691214" duration="9652000" />
+      <workItem from="1609767691214" duration="10287000" />
+      <workItem from="1609858481389" duration="591000" />
+      <workItem from="1609860226506" duration="874000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1607444130931</created>
@@ -81,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607444130931</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1609846128687</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609846128687</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
