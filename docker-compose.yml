@@ -20,8 +20,6 @@ services:
       - mailcatcher
     environment:
       PHP_IDE_CONFIG: "serverName=${APP_URL}"
-    extra_hosts:
-      - "host.docker.internal:192.168.32.1"
 
   web:
     build:
