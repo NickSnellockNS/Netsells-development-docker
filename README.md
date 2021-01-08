@@ -7,3 +7,5 @@ export UID=$(id -u)
 
 export GID=$(id -g)
 ```
+
+Ti use, just update the .env file to correspond to your current project and run `docker-compose up`
