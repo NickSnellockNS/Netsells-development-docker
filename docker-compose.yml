@@ -5,11 +5,10 @@ services:
       context: ./docker/conf/php
       dockerfile: Dockerfile
     restart: always
+    user: ${UID}:${GID}
     volumes:
       - ${PROJECT_ROOT}:/var/www
       - ~/.composer:/var/www/.composer
-      - ./docker/conf/nginx/netsells.test.crt:/var/www/certs/netsells.test.crt
-      - ./docker/conf/nginx/netsells.test.key:/var/www/certs/netsells.test.key
     depends_on:
       - mysql
       - redis
@@ -44,6 +43,7 @@ services:
   mysql:
     image: library/mysql
     restart: always
+    user: ${UID}:${GID}
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_USER: ${DB_USER}
@@ -58,6 +58,7 @@ services:
 
   redis:
     image: redis
+    user: ${UID}:${GID}
     ports:
       - 6379:6379
     restart: always
