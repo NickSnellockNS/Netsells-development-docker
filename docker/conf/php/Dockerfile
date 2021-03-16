@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -y \
         git \
         iputils-ping \
         iproute2 \
-        npm
+        npm \
+        yarn
 
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug \
@@ -39,7 +40,8 @@ RUN pear config-set php_ini /usr/local/etc/php/php.ini \
     && echo "xdebug.idekey=PHPSTORM" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && echo "xdebug.remote_autostart=off" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.discover_client_host=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    && echo "xdebug.discover_client_host=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
+    && echo "xdebug.client_host=172.17.0.1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 WORKDIR /var/www
 

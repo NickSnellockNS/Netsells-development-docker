@@ -9,16 +9,21 @@ services:
     volumes:
       - ${PROJECT_ROOT}:/var/www
       - ~/.composer:/var/www/.composer
+      - ./docker/conf/php/php.ini:/usr/local/etc/php/php.ini
     depends_on:
       - mysql
       - redis
     network_mode: bridge
+    ports:
+      - 6001:6001
+      - 8080:8080
     links:
       - mysql
       - redis
       - mailcatcher
     environment:
       PHP_IDE_CONFIG: "serverName=${APP_URL}"
+    hostname: laravel-pusher
 
   web:
     build:
@@ -31,6 +36,10 @@ services:
     ports:
       - 80:80
       - 443:443
+      - 6002:6002
+      - 3000:3000
+      - 3001:3001
+      - 3002:3002
     restart: always
     depends_on:
       - php
